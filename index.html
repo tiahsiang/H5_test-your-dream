@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <!-- iphone的私有标签，它指定的iphone中safari顶端的状态条的样式 -->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <!-- ipone的私有标签，忽略将页面中的数字识别为电话号码 -->
+    <meta content="telephone=no" name="format-detection" />
+    <!-- 禁止Android自动识别页面中的邮件地址   -->
+    <meta content="email=no" name="format-detection" />
+    <title>测一测你的未来去向_伯招聘</title>
+    <script type="text/javascript">
+        ;(function(doc,win){
+            var docEl = doc.documentElement,resizeEvt = 'orientationchange' in window ? 'orientationchange':'resize',
+                recalc = function(){
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;docEl.style.fontSize = 20 *(clientWidth / 375)+'px'};
+            recalc();
+            var tid;
+            if(!doc.addEventListener) return;
+            win.addEventListener(resizeEvt,function(){clearTimeout(tid);tid = setTimeout(recalc,300)},false)})(document,window);
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/swiper-4.3.3.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/dream_h5.css?4"/>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?2052908d71c7d8ab39e81cdfdb3ab633";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+<!-- 0：preload -->
+<div class="w100 h100 abso preload">
+    <p class="change"></p>
+    <span></span>
+</div>
+<!-- page1：开始 -->
+<div class="page1">
+    <div class="abso left50 p1_img1"></div>
+    <div class="abso left50 p1_img2">
+        <div class="abso p1-text-wrap">
+            <p class="p1-sprites p1-text"></p>
+        </div>
+    </div>
+    <div class="abso left50 p1_img4">
+        <span class="abso click-btn"></span>
+    </div>
+</div>
+<!-- page2：录入名字 -->
+<div class="page2">
+    <div class="abso left50 p2_img1"></div>
+    <div class="abso left50 p2_img2"></div>
+    <div class="input-box">
+        <p class="abso p2-sprites"></p>
+        <input type="text" id="name" maxlength="8" placeholder="填写名字">
+    </div>
+    <div class="abso left50 p2_img3"></div>
+    <div class="abso left50 p2_img4">
+        <p class="start-btn"></p>
+    </div>
+
+</div>
+<!-- page3：问答 -->
+<div class="page3">
+    <!--Q1-->
+    <div class="ques" id="q1" style="display: block">
+        <div class="abso left50 p3_img1"></div>
+        <div class="abso left50 p3_img2"></div>
+        <p class="opt opt_a" data-opt="1">
+            <span class="abso left50 opt1"></span>
+        </p>
+        <p class="opt opt_b" data-opt="2">
+            <span class="abso left50 opt2"></span>
+        </p>
+        <div class="abso left50 p1_img4">
+            <span class="abso click-btn"></span>
+        </div>
+    </div>
+    <!--Q2-->
+    <div class="ques" id="q2">
+        <div class="abso left50 p4_img1"></div>
+        <div class="abso left50 p4_img2"></div>
+        <p class="opt opt_a" data-opt="1">
+            <span class="abso left50 opt1"></span>
+        </p>
+        <p class="opt opt_b" data-opt="2">
+            <span class="abso left50 opt2"></span>
+        </p>
+    </div>
+    <!--Q3-->
+    <div class="ques" id="q3">
+        <div class="abso left50 p5_img1"></div>
+        <div class="abso left50 p5_img2"></div>
+        <p class="opt opt_a" data-opt="1">
+            <span class="abso left50 opt1"></span>
+        </p>
+        <p class="opt opt_b" data-opt="2">
+            <span class="abso left50 opt2"></span>
+        </p>
+    </div>
+    <!--Q4-->
+    <div class="ques" id="q4">
+        <div class="abso left50 p6_img1"></div>
+        <div class="abso left50 p6_img2"></div>
+        <p class="opt opt_a" data-opt="1">
+            <span class="abso left50 opt1"></span>
+        </p>
+        <p class="opt opt_b" data-opt="2">
+            <span class="abso left50 opt2"></span>
+        </p>
+    </div>
+    <!--Q5-->
+    <div class="ques" id="q5">
+        <div class="abso left50 p7_img1"></div>
+        <div class="abso left50 p7_img2"></div>
+        <p class="opt opt_a" data-opt="1">
+            <span class="abso left50 opt1"></span>
+        </p>
+        <p class="opt opt_b" data-opt="2">
+            <span class="abso left50 opt2"></span>
+        </p>
+    </div>
+    <div class="mix-loading" style="display: none"><i></i><i></i><i></i><i></i></div>
+</div>
+<!-- page4：result -->
+<div class="page4">
+    <div class="post-wrap">
+        <div class="res-h2"><p class="post-name"></p> <span>的测试结果：</span></div>
+        <div class="abso left50 p8_img1"></div>
+        <div class="abso left50 res-img-layout">
+            <img class="w100 h100 res-img" src="" alt="">
+        </div>
+        <!-- 登录二维码 -->
+        <div class="abso left50 qrcode">
+            <img src="./images/erweima.png">
+            <p class="ct-txt">扫码登录博招聘</p>
+            <p class="ct-txt">开启你的海外工作大门</p>
+        </div>
+    </div>
+
+    <p class="end-btn" id="again-btn"><span class="shareTo-btn"></span></p>
+    <p class="end-btn" id="share-btn"><span class="retest-btn"></span></p>
+    <img src="" class="top-post">
+
+</div>
+<div class="share-mask" style="display: none"><div class="share-text">长按保存图片即可分享</div></div>
+<canvas id="ourCanvas" width="" height=""></canvas>
+
+<!-- 背景音乐 -->
+<audio src="music/2_guitar.mp3" id="optionAudio"></audio>
+<audio src="music/3_elect.mp3" id="endAudio"></audio>
+
+
+<!-- main JS -->
+<script src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.js"></script>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/swiper-4.3.3.min.js"></script>
+<script type="text/javascript" src="js/html2canvas.js"></script>
+<script>
+    $(window).on('touchmove', function (e) {e.preventDefault();});
+    $(".preload,.page").on("touchmove", function(t) {t.preventDefault()});
+
+    var Dom={
+        preload : $(".preload"),
+        page1 : $(".page1"),
+        page2 : $(".page2"),
+        page3 : $(".page3"),
+        page4 : $(".page4"),
+        clickBtn : $(".click-btn"),
+        startBtn : $(".start-btn"),
+        username:'',
+        process:1,
+        optionAudio:$("#optionAudio")[0],
+        endAudio:$("#endAudio")[0],
+        canvas : document.getElementById("ourCanvas"),
+        scale: 2,
+        wWidth : $(window).width(),
+        wHeight : $(window).height(),
+        mixLoading: $(".mix-loading"),
+        audioRandom:parseInt(Math.random()*2)+1,
+        again : $("#again-btn"),
+        share : $("#share-btn")
+    };
+
+    var baseUrl ='images/', imgindex= 0;
+    fileList=[
+        // baseUrl+'blue_bg.png',
+        baseUrl+'blue_lg_btn_on.png',
+        baseUrl+'hand-click.png',
+        baseUrl+'music.png',
+        baseUrl+'p1-arrow.png',
+        baseUrl+'p1-title1.png',
+        baseUrl+'p1-title2.png',
+        baseUrl+'p1-title4.png',
+        baseUrl+'p1_text.png',
+        baseUrl+'q1-1.png',
+        baseUrl+'q1-2.png',
+        baseUrl+'q1-showImg.png',
+        baseUrl+'q1-title.png',
+        baseUrl+'q2-1.png',
+        baseUrl+'q2-2.png',
+        baseUrl+'q2-showImg.png',
+        baseUrl+'q2-title.png',
+        baseUrl+'q3-1.png',
+        baseUrl+'q3-2.png',
+        baseUrl+'q3-showImg.png',
+        baseUrl+'q3-title.png',
+        baseUrl+'q4-1.png',
+        baseUrl+'q4-2.png',
+        baseUrl+'q4-showImg.png',
+        baseUrl+'q4-title.png',
+        baseUrl+'q5-1.png',
+        baseUrl+'q5-2.png',
+        baseUrl+'q5-showImg.png',
+        baseUrl+'q5-title.png',
+        baseUrl+'result-title.png',
+        baseUrl+'result_bg.png',
+        // baseUrl+'reset_btn.png',
+        baseUrl+'share_btn.png',
+        baseUrl+'save-tishi.png',
+        baseUrl+'selected.png',
+        baseUrl+'uname-input.png',
+        baseUrl+'erweima.png',
+        baseUrl+'test_result1.png',
+        baseUrl+'test_result2.png'
+    ];
+    function loadImage(imgIndex){
+        var img = new Image();
+        img.src = fileList[imgIndex];
+        var percent = parseInt(imgIndex/fileList.length *100);
+        img.onload = function () {
+            imgIndex++;
+            Dom.preload.find("span").html(percent+"%");
+            if(imgIndex < fileList.length){
+                loadImage(imgIndex);
+            }else{
+                Dom.preload.find("span").html("100%");
+                fadeOut(".preload");
+                setTimeout(function(){
+                    Dom.preload.remove()
+                },600);
+            }
+        }
+    }
+    window.onload=function(){
+        loadImage(imgindex);
+        Dom.page2.css("height",Dom.wHeight);
+        Dom.preload.addClass("change");
+        htmlToCanvas.initCanvas();
+        Dom.endAudio.src='music/bgmusic.mp3';
+        $(".res-img").attr("src",'images/test_result'+Dom.audioRandom+'.png');
+
+        Dom.again.click(function () {
+            var that = this;
+            $(this).addClass("clicked");
+            setTimeout(function () {
+                $(that).removeClass("clicked");
+                window.location.reload();
+            },200);
+        });
+        Dom.share.on("touchend",function () {
+            var that = this;
+            $(this).addClass("clicked");
+            setTimeout(function () {
+                $(that).removeClass("clicked");
+                $(".share-mask").show();
+            },200);
+        });
+        $(".share-mask").on("touchend",function () {
+            $(this).hide();
+        });
+
+    };
+    Dom.clickBtn.on("click",function () {
+        fadeOut(".page1");
+        fadeIn(".page2");
+    });
+    $("#name").focus(function () {
+        $(".input-box p").hide();
+    });
+    //提交姓名 进入问答
+    Dom.startBtn.on("click",function () {
+        var that = this;
+        Dom.username=$("#name").val();
+        $(".post-name").html(Dom.username);
+        $(this).addClass("clicked");
+        if(Dom.username.length<=0){
+            setTimeout(function () {
+                $(that).removeClass("clicked");
+                alert("请填写姓名~")
+            },200);
+        }else{
+            setTimeout(function () {
+                $(that).removeClass("clicked");
+                fadeOut(".page2");
+                fadeIn(".page3");
+            },300)
+        }
+    });
+
+    //点击 答案选项
+    $(".opt").click(function () {
+        var that = this;
+        $(this).addClass("clicked");
+        if(Dom.process<=5){
+            var _idx=$(this).attr("data-opt");
+            setTimeout(function(){
+                fadeOut("#q"+Dom.process);
+                fadeIn("#q"+(Dom.process+1));
+                if(Dom.process==5){
+                    setTimeout(function () {
+                        $(this).removeClass("clicked");
+                        fadeOut(".page3");
+                        fadeIn(".page4");
+                    },300)
+                }
+                Dom.process++;
+                //console.log(Dom.process+" "+_idx);
+            },550);
+        }else{
+            setTimeout(function(){
+                Dom.mixLoading.show();
+                setTimeout(function(){
+                    htmlToCanvas.canvasToImg();
+                },450);
+            },450)
+        }
+    });
+
+    var htmlToCanvas={
+        initCanvas:function(){
+            Dom.canvas.width =Dom.wWidth*Dom.scale;
+            Dom.canvas.height = Dom.wWidth*1186/750*Dom.scale;
+            Dom.canvas.style.width = Dom.wWidth + "px";
+            Dom.canvas.style.height = Dom.wWidth*1186/750 + "px";
+            var context = Dom.canvas.getContext("2d");
+            context.scale(Dom.scale,Dom.scale);
+        },
+        //合成
+        canvasToImg:function () {
+            Dom.page4.show();
+            html2canvas($(".post-wrap")[0],{
+                allowTaint: true,
+                canvas: Dom.canvas,
+                taintTest: false,
+                useCORS: true ,
+                onrendered:function(canvas) {
+                    imgData = canvas.toDataURL("image/jpg");
+                    $(".top-post").attr("src",imgData);
+                    $(".post-wrap").addClass("scale");
+                    setTimeout(function () {
+                        Dom.page4.css("z-index","33");
+                        Dom.page3.hide();
+                        Dom.mixLoading.hide();
+
+                        Dom.endAudio.play();
+                        pauseFun();
+                        Dom.endAudio.addEventListener("ended",function () {
+                            playFun();
+                        })
+
+                    },800);
+                }
+            });
+        }
+    };
+
+    function fadeIn(obj) {
+        $(obj).show().addClass("fadeIn").removeClass("fadeOut");
+        setTimeout(function () {
+            $(obj).removeClass("fadeIn");
+        },600)
+    }
+    function fadeOut(obj) {
+        $(obj).addClass("fadeOut").removeClass("fadeIn");
+        setTimeout(function () {
+            $(obj).hide().removeClass("fadeOut");
+        },600)
+    }
+    window.alert = function(name){
+        var iframe = document.createElement("IFRAME");
+        iframe.style.display="none";
+        iframe.setAttribute("src", 'data:text/plain,');
+        document.documentElement.appendChild(iframe);
+        window.frames[0].window.alert(name);
+        iframe.parentNode.removeChild(iframe);
+    }
+
+    var musicSRC="music/bgmusic.mp3";
+    var inStyle=".musicIco{width:37px;height:36px;position:fixed;right:5px;top:5px;z-index:99;background:url('images/music.png') no-repeat;background-size:94px auto;animation: musicMove 3s infinite;}.play{background-position:left top;}.paused{background-position:right top}@-webkit-keyframes musicMove{0%{-webkit-transform:rotate(0deg)}100%{-webkit-transform:rotate(360deg)}}";
+    var newStyle=document.createElement("style");
+    newStyle.innerHTML=inStyle;
+    document.head.appendChild(newStyle);
+    var ele=document.createElement("p");// 插入图标
+    ele.className="musicIco play";
+    document.body.appendChild(ele);
+    var audio=document.createElement("audio");//生成音频
+    audio.src=musicSRC;
+    document.body.appendChild(audio);
+    audio.preload=true;
+    audio.autoplay=false;
+    audio.loop=true;
+    audio.volume=1;
+    audio.muted=false;
+    function playFun(){// 播放处理
+        audio.play();
+        ele.className="musicIco play";
+    };
+    function pauseFun(){ //暂停处理
+        audio.pause();
+        ele.className="musicIco paused";
+    };
+    //监听点击事件
+    function listenClick(){
+        ele.addEventListener("touchend",function(){
+            if(audio.paused==true){
+                playFun(); //未播放
+            }else{
+                pauseFun();//播放中
+            }
+        });
+    };
+    //监听点击事件
+    listenClick();
+    //加载完毕播放
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+        Dom.endAudio.play();
+        Dom.endAudio.pause();
+    }, false);
+    audio.play();
+</script>
+
+
+
+</body>
+</html>
